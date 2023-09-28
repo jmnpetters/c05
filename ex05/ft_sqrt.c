@@ -6,12 +6,12 @@
 /*   By: jpetters <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 10:00:21 by jpetters          #+#    #+#             */
-/*   Updated: 2023/09/25 17:45:42 by jpetters         ###   ########.fr       */
+/*   Updated: 2023/09/26 14:26:21 by jpetters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <limits.h>
+//#include <stdio.h>
+//#include <limits.h>
 
 int	ft_sqrt(int nb)
 {
@@ -21,16 +21,12 @@ int	ft_sqrt(int nb)
 	{
 		return (1);
 	}
-	if ((nb == 2) || (nb == 3))
+	if (nb == 2 || nb == 3)
 	{
 		return (0);
 	}
-	if (nb == 4)
-	{
-		return (2);
-	}
-	root = 3;
-	while ((root <= nb / 3) && (root * root != nb))
+	root = 2;
+	while (root * root < nb && root < 46341)
 	{
 		root++;
 	}
